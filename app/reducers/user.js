@@ -17,7 +17,7 @@ export default function user(state= InitialState, action: actionType) {
     case LOGGING:
       return { ...state, loading: true};
     case LOGGED_IN:
-      return { ...state, user: "Librarian"};
+      return { ...state, user: "Librarian", loading: false};
     case LOGGED_OUT:
       return { ...state, user: null};      
     default:

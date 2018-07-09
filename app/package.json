@@ -14,5 +14,8 @@
     "postinstall": "npm run electron-rebuild"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.38.0"
+  }
 }

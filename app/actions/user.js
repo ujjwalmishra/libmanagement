@@ -10,9 +10,20 @@ export const LOGGED_IN = 'LOGGED_IN';
 export const LOGGED_OUT = 'LOGGED_OUT';
 
 export function logging(values) {
-  return {
-    type: LOGGING
-  };
+
+    return (dispatch) => {       
+        dispatch(asyncwait());
+        return setTimeout(() => {
+            dispatch(logged());
+        }, 3000);
+    }
+
+}
+
+export function asyncwait() {
+    return {
+        type: LOGGING
+    };
 }
 
 export function logged() {
